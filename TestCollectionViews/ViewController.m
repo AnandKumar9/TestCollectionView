@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "InformationViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    InformationViewController *vc = [[InformationViewController alloc] initWithNibName:@"InformationViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:NO];
+
 }
 
 - (void)didReceiveMemoryWarning {

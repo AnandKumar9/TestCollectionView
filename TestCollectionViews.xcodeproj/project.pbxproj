@@ -13,6 +13,8 @@
 		B32D020B1C4EE5B700DD3AA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D02091C4EE5B700DD3AA3 /* Main.storyboard */; };
 		B32D020D1C4EE5B700DD3AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32D020C1C4EE5B700DD3AA3 /* Assets.xcassets */; };
 		B32D02101C4EE5B700DD3AA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D020E1C4EE5B700DD3AA3 /* LaunchScreen.storyboard */; };
+		B32D021A1C4EE61500DD3AA3 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D02181C4EE61500DD3AA3 /* InformationViewController.m */; };
+		B32D021B1C4EE61500DD3AA3 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32D02191C4EE61500DD3AA3 /* InformationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		B32D020C1C4EE5B700DD3AA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32D020F1C4EE5B700DD3AA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32D02111C4EE5B700DD3AA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32D02171C4EE61500DD3AA3 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		B32D02181C4EE61500DD3AA3 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		B32D02191C4EE61500DD3AA3 /* InformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,9 @@
 				B32D02061C4EE5B700DD3AA3 /* ViewController.h */,
 				B32D02071C4EE5B700DD3AA3 /* ViewController.m */,
 				B32D02091C4EE5B700DD3AA3 /* Main.storyboard */,
+				B32D02171C4EE61500DD3AA3 /* InformationViewController.h */,
+				B32D02181C4EE61500DD3AA3 /* InformationViewController.m */,
+				B32D02191C4EE61500DD3AA3 /* InformationViewController.xib */,
 				B32D020C1C4EE5B700DD3AA3 /* Assets.xcassets */,
 				B32D020E1C4EE5B700DD3AA3 /* LaunchScreen.storyboard */,
 				B32D02111C4EE5B700DD3AA3 /* Info.plist */,
@@ -139,6 +147,7 @@
 				B32D02101C4EE5B700DD3AA3 /* LaunchScreen.storyboard in Resources */,
 				B32D020D1C4EE5B700DD3AA3 /* Assets.xcassets in Resources */,
 				B32D020B1C4EE5B700DD3AA3 /* Main.storyboard in Resources */,
+				B32D021B1C4EE61500DD3AA3 /* InformationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +161,7 @@
 				B32D02081C4EE5B700DD3AA3 /* ViewController.m in Sources */,
 				B32D02051C4EE5B700DD3AA3 /* AppDelegate.m in Sources */,
 				B32D02021C4EE5B700DD3AA3 /* main.m in Sources */,
+				B32D021A1C4EE61500DD3AA3 /* InformationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
