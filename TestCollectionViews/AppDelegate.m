@@ -17,7 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self createData];
+    
     return YES;
+}
+
+- (void)createData {
+    self.teams = [NSMutableArray new];
+    
+    for (int i = 1; i < 8; i++) {
+        Team *team = [Team new];
+        team.name = [NSString stringWithFormat:@"Team %d",i];
+        Player *player = [Player new];
+        player.name = [NSString stringWithFormat:@"%@ - Player 1", team.name];
+        team.players = [NSMutableArray arrayWithArray:@[player]];
+        
+        [self.teams addObject:team];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

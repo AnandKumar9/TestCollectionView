@@ -10,6 +10,8 @@
 
 @interface InformationViewController ()
 
+@property (weak, nonatomic) IBOutlet UICollectionView *teamsCollectionView;
+
 @end
 
 @implementation InformationViewController

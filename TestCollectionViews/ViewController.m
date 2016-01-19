@@ -20,6 +20,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)createData {
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     InformationViewController *vc = [[InformationViewController alloc] initWithNibName:@"InformationViewController" bundle:nil];
     [self.navigationController pushViewController:vc animated:NO];
