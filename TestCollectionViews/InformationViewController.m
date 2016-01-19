@@ -7,10 +7,17 @@
 //
 
 #import "InformationViewController.h"
+#import "TeamsCollectionViewCell.h"
+#import "AppDelegate.h"
 
-@interface InformationViewController ()
+@interface InformationViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *teamsCollectionView;
+@property (nonatomic) UICollectionViewFlowLayout *teamsCollectionViewLayout;
+
+@property (nonatomic) AppDelegate *appDelegate;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *teamsCollectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *placeholderViewHeightConstraint;
 
 @end
 
@@ -18,22 +25,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [self.teamsCollectionView registerNib:[UINib nibWithNibName:@"TeamsCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"Team Cell"];
+    self.teamsCollectionView.dataSource = self;
+    self.teamsCollectionView.delegate = self;
+
+//    self.teamsCollectionViewLayout = [UICollectionViewFlowLayout new];
+//    self.teamsCollectionViewLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+////    self.teamsCollectionViewLayout.minimumInteritemSpacing = 2.0f;
+//    self.teamsCollectionViewLayout.minimumLineSpacing = 5.0f;
+//    
+//    [self.teamsCollectionView setCollectionViewLayout:self.teamsCollectionViewLayout];
+
 }
+
+- (void)viewDidLayoutSubviews {
+    
+    self.placeholderViewHeightConstraint.constant = 150*[self collectionView:self.teamsCollectionView numberOfItemsInSection:0];
+    self.teamsCollectionViewHeightConstraint.constant = 150*[self collectionView:self.teamsCollectionView numberOfItemsInSection:0];
+    [self.view setNeedsLayout];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.appDelegate.teams.count;
 }
-*/
 
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    TeamsCollectionViewCell *cell = (TeamsCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Team Cell" forIndexPath:indexPath];
+
+    return cell;
+
+}
 @end
