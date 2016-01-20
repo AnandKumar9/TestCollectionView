@@ -1,5 +1,5 @@
 //
-//  TeamsCollectionViewCell.h
+//  PlayersCollectionViewCell.h
 //  TestCollectionViews
 //
 //  Created by Anand Kumar 5 on 1/19/16.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Team.h"
 
-@interface TeamsCollectionViewCell : UICollectionViewCell
-
-@property (nonatomic) Team *team;
+@interface PlayersCollectionViewCell : UICollectionViewCell
 
 @end

@@ -20,6 +20,8 @@
 		B32D02211C4EE7A500DD3AA3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D02201C4EE7A500DD3AA3 /* Player.m */; };
 		B32D02251C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D02231C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.m */; };
 		B32D02261C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32D02241C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.xib */; };
+		B32D022A1C4F165A00DD3AA3 /* PlayersCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D02281C4F165A00DD3AA3 /* PlayersCollectionViewCell.m */; };
+		B32D022B1C4F165A00DD3AA3 /* PlayersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32D02291C4F165A00DD3AA3 /* PlayersCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,9 @@
 		B32D02221C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsCollectionViewCell.h; sourceTree = "<group>"; };
 		B32D02231C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsCollectionViewCell.m; sourceTree = "<group>"; };
 		B32D02241C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamsCollectionViewCell.xib; sourceTree = "<group>"; };
+		B32D02271C4F165A00DD3AA3 /* PlayersCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersCollectionViewCell.h; sourceTree = "<group>"; };
+		B32D02281C4F165A00DD3AA3 /* PlayersCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersCollectionViewCell.m; sourceTree = "<group>"; };
+		B32D02291C4F165A00DD3AA3 /* PlayersCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayersCollectionViewCell.xib; sourceTree = "<group>"; };
 		C9DB80F436CECA8CE2B43C89 /* Pods-TestCollectionViews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestCollectionViews.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestCollectionViews/Pods-TestCollectionViews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +108,9 @@
 				B32D02221C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.h */,
 				B32D02231C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.m */,
 				B32D02241C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.xib */,
+				B32D02271C4F165A00DD3AA3 /* PlayersCollectionViewCell.h */,
+				B32D02281C4F165A00DD3AA3 /* PlayersCollectionViewCell.m */,
+				B32D02291C4F165A00DD3AA3 /* PlayersCollectionViewCell.xib */,
 				B32D02091C4EE5B700DD3AA3 /* Main.storyboard */,
 				B32D020C1C4EE5B700DD3AA3 /* Assets.xcassets */,
 				B32D020E1C4EE5B700DD3AA3 /* LaunchScreen.storyboard */,
@@ -193,6 +201,7 @@
 				B32D020D1C4EE5B700DD3AA3 /* Assets.xcassets in Resources */,
 				B32D020B1C4EE5B700DD3AA3 /* Main.storyboard in Resources */,
 				B32D021B1C4EE61500DD3AA3 /* InformationViewController.xib in Resources */,
+				B32D022B1C4F165A00DD3AA3 /* PlayersCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +250,7 @@
 				B32D02051C4EE5B700DD3AA3 /* AppDelegate.m in Sources */,
 				B32D02251C4EEB9D00DD3AA3 /* TeamsCollectionViewCell.m in Sources */,
 				B32D02021C4EE5B700DD3AA3 /* main.m in Sources */,
+				B32D022A1C4F165A00DD3AA3 /* PlayersCollectionViewCell.m in Sources */,
 				B32D02211C4EE7A500DD3AA3 /* Player.m in Sources */,
 				B32D021A1C4EE61500DD3AA3 /* InformationViewController.m in Sources */,
 			);

@@ -7,8 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationViewController">
             <connections>
-                <outlet property="placeholderViewHeightConstraint" destination="mhg-AR-cY0" id="Wxz-rZ-r9s"/>
                 <outlet property="teamsCollectionView" destination="Pcj-Hy-60w" id="Xpx-TI-ih7"/>
+                <outlet property="teamsCollectionViewHeightConstraint" destination="U5F-U1-Pr1" id="btV-qc-kgk"/>
                 <outlet property="teamsCollectionViewTrailingSpaceConstraint" destination="xX0-FV-gGz" id="CmC-CI-GAU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,7 +28,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="1050"/>
                                     <color key="backgroundColor" red="0.95432622830000002" green="1" blue="0.65534964259999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="1050" id="mhg-AR-cY0"/>
+                                        <constraint firstAttribute="height" constant="1050" identifier="A1" id="U5F-U1-Pr1"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h9w-dG-tph">
                                         <size key="itemSize" width="50" height="50"/>
@@ -40,29 +40,29 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="Pcj-Hy-60w" secondAttribute="bottom" id="FUs-4W-g0l"/>
-                                <constraint firstItem="Pcj-Hy-60w" firstAttribute="leading" secondItem="BO8-lT-Tj6" secondAttribute="leading" id="Vg6-fP-4l0"/>
-                                <constraint firstItem="Pcj-Hy-60w" firstAttribute="top" secondItem="BO8-lT-Tj6" secondAttribute="top" id="lOM-uO-vgk"/>
-                                <constraint firstAttribute="trailing" secondItem="Pcj-Hy-60w" secondAttribute="trailing" id="xX0-FV-gGz"/>
+                                <constraint firstAttribute="bottom" secondItem="Pcj-Hy-60w" secondAttribute="bottom" identifier="A2" id="FUs-4W-g0l"/>
+                                <constraint firstItem="Pcj-Hy-60w" firstAttribute="leading" secondItem="BO8-lT-Tj6" secondAttribute="leading" identifier="A3" id="Vg6-fP-4l0"/>
+                                <constraint firstItem="Pcj-Hy-60w" firstAttribute="top" secondItem="BO8-lT-Tj6" secondAttribute="top" identifier="A4" id="lOM-uO-vgk"/>
+                                <constraint firstAttribute="trailing" secondItem="Pcj-Hy-60w" secondAttribute="trailing" identifier="A5" id="xX0-FV-gGz"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.79215687509999999" green="0.8156862855" blue="0.85882353779999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="BO8-lT-Tj6" secondAttribute="trailing" id="LrH-lY-lJ7"/>
-                        <constraint firstAttribute="bottom" secondItem="BO8-lT-Tj6" secondAttribute="bottom" id="OIg-FA-e1c"/>
-                        <constraint firstItem="BO8-lT-Tj6" firstAttribute="top" secondItem="ipH-9n-Qa9" secondAttribute="top" id="QcR-O0-Utu"/>
-                        <constraint firstItem="BO8-lT-Tj6" firstAttribute="width" secondItem="ipH-9n-Qa9" secondAttribute="width" id="SxT-XL-p1R"/>
-                        <constraint firstItem="BO8-lT-Tj6" firstAttribute="leading" secondItem="ipH-9n-Qa9" secondAttribute="leading" id="coH-l2-Lic"/>
+                        <constraint firstAttribute="trailing" secondItem="BO8-lT-Tj6" secondAttribute="trailing" identifier="A6" id="LrH-lY-lJ7"/>
+                        <constraint firstAttribute="bottom" secondItem="BO8-lT-Tj6" secondAttribute="bottom" identifier="A7" id="OIg-FA-e1c"/>
+                        <constraint firstItem="BO8-lT-Tj6" firstAttribute="top" secondItem="ipH-9n-Qa9" secondAttribute="top" identifier="A8" id="QcR-O0-Utu"/>
+                        <constraint firstItem="BO8-lT-Tj6" firstAttribute="width" secondItem="ipH-9n-Qa9" secondAttribute="width" identifier="A9" id="SxT-XL-p1R"/>
+                        <constraint firstItem="BO8-lT-Tj6" firstAttribute="leading" secondItem="ipH-9n-Qa9" secondAttribute="leading" identifier="A10" id="coH-l2-Lic"/>
                     </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ipH-9n-Qa9" secondAttribute="bottom" id="7jo-fW-HyR"/>
-                <constraint firstItem="ipH-9n-Qa9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Px6-sA-WzV"/>
-                <constraint firstAttribute="trailing" secondItem="ipH-9n-Qa9" secondAttribute="trailing" id="U8O-yR-fNa"/>
-                <constraint firstItem="ipH-9n-Qa9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uiw-z1-d63"/>
+                <constraint firstAttribute="bottom" secondItem="ipH-9n-Qa9" secondAttribute="bottom" identifier="A11" id="7jo-fW-HyR"/>
+                <constraint firstItem="ipH-9n-Qa9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" identifier="A12" id="Px6-sA-WzV"/>
+                <constraint firstAttribute="trailing" secondItem="ipH-9n-Qa9" secondAttribute="trailing" identifier="A13" id="U8O-yR-fNa"/>
+                <constraint firstItem="ipH-9n-Qa9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" identifier="A14" id="Uiw-z1-d63"/>
             </constraints>
             <point key="canvasLocation" x="405" y="340"/>
         </view>

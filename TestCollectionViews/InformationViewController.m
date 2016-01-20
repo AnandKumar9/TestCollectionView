@@ -17,7 +17,6 @@
 
 @property (nonatomic) AppDelegate *appDelegate;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *teamsCollectionViewHeightConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *placeholderViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *teamsCollectionViewTrailingSpaceConstraint;
 
 @end
@@ -55,11 +54,20 @@
     
     CGFloat height = [teamCollectionViewCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     self.teamsCollectionViewLayout.estimatedItemSize = CGSizeMake(CGRectGetWidth(self.teamsCollectionView.bounds), height);
+    
+    
+    self.teamsCollectionViewHeightConstraint.constant = self.teamsCollectionView.collectionViewLayout.collectionViewContentSize.height;
+    [self.view setNeedsLayout];
 }
 
-- (void)viewDidLayoutSubviews {
+//- (void)viewDidLayoutSubviews {
 //    self.teamsCollectionViewHeightConstraint.constant = self.teamsCollectionView.collectionViewLayout.collectionViewContentSize.height;
-    [self.view setNeedsLayout];
+//    [self.view setNeedsLayout];
+//}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
 }
 
 
@@ -77,8 +85,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     TeamsCollectionViewCell *cell = (TeamsCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Team Cell" forIndexPath:indexPath];
-
+    cell.team = self.appDelegate.teams[indexPath.item];
+    
     return cell;
 
 }
+
 @end
