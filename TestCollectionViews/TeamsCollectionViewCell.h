@@ -12,5 +12,6 @@
 @interface TeamsCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic) Team *team;
+@property (weak, nonatomic) IBOutlet UILabel *appPlayerViewLabel;
 
 @end

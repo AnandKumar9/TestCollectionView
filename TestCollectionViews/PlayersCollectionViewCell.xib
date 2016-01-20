@@ -7,14 +7,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlayersCollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Player Cell" id="gTV-IL-0wX" customClass="PlayersCollectionViewCell">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOT-sS-Sti" userLabel="Player Label">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Obn-yC-bbf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lOT-sS-Sti" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0u6-5M-7RV"/>
+                <constraint firstItem="lOT-sS-Sti" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="aNK-3a-cof"/>
+                <constraint firstItem="lOT-sS-Sti" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="mlA-iW-9db"/>
+                <constraint firstItem="lOT-sS-Sti" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ybe-P7-8hx"/>
+            </constraints>
+            <connections>
+                <outlet property="playerNameLabel" destination="lOT-sS-Sti" id="Md1-Ah-gFV"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

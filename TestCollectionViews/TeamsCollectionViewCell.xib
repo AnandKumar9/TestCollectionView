@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TeamsCollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Team Cell" id="gTV-IL-0wX" customClass="TeamsCollectionViewCell">
             <rect key="frame" x="0.0" y="0.0" width="211" height="180"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -28,9 +28,19 @@
                     </collectionView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjP-Yb-2xI" userLabel="Add Player View">
                         <rect key="frame" x="0.0" y="100" width="211" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoX-NO-Ska" userLabel="Add Player View Label">
+                                <rect key="frame" x="84" y="30" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.79215687509999999" green="0.031372550870000002" blue="0.074509806930000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ZoX-NO-Ska" firstAttribute="centerY" secondItem="kjP-Yb-2xI" secondAttribute="centerY" id="bB8-tM-cLt"/>
                             <constraint firstAttribute="height" constant="80" identifier="B2" id="fFn-1a-w36"/>
+                            <constraint firstItem="ZoX-NO-Ska" firstAttribute="centerX" secondItem="kjP-Yb-2xI" secondAttribute="centerX" id="qet-zm-Buy"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -47,6 +57,7 @@
             </constraints>
             <size key="customSize" width="211" height="52"/>
             <connections>
+                <outlet property="appPlayerViewLabel" destination="ZoX-NO-Ska" id="SBC-vi-i5P"/>
                 <outlet property="playersCollectionView" destination="8xf-Pj-wO1" id="YI9-PW-CEL"/>
                 <outlet property="playersCollectionViewHeightConstraint" destination="NtD-BS-etR" id="pYX-iV-Qze"/>
             </connections>

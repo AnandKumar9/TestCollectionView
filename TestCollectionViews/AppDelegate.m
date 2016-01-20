@@ -25,7 +25,7 @@
 - (void)createData {
     self.teams = [NSMutableArray new];
     
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 11; i++) {
         Team *team = [Team new];
         team.name = [NSString stringWithFormat:@"Team %d",i];
         team.players = [NSMutableArray new];
@@ -36,12 +36,17 @@
         }
         
         if (i == 1) {
-            [team.players addObject:[Player new]];
-            [team.players addObject:[Player new]];
+            Player *playerA = [Player new];
+            playerA.name = [NSString stringWithFormat:@"%@ - Player 4", team.name];
+            [team.players addObject:playerA];
+            Player *playerB = [Player new];
+            playerB.name = [NSString stringWithFormat:@"%@ - Player 5", team.name];
+            [team.players addObject:playerB];
         }
         
         [self.teams addObject:team];
     }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

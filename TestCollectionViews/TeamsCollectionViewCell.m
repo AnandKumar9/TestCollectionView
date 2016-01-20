@@ -69,15 +69,16 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
     return self.team.players.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+
     PlayersCollectionViewCell *cell = (PlayersCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Player Cell" forIndexPath:indexPath];
-//    cell.team = self.appDelegate.teams[indexPath.item];
-    
+//    cell.playerNameLabel.text = [self.team.players[indexPath.item] valueForKey:@"name"];
+    cell.player =  [self.team.players[indexPath.item] valueForKey:@"name"];
+    cell.playerNameLabel.text = [self.team.players[indexPath.item] valueForKey:@"name"];
+
     return cell;
     
 }

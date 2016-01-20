@@ -41,7 +41,7 @@
     self.teamsCollectionViewLayout = [UICollectionViewFlowLayout new];
     self.teamsCollectionViewLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     self.teamsCollectionViewLayout.minimumInteritemSpacing = 0.0f;
-    self.teamsCollectionViewLayout.minimumLineSpacing = 9.0f;
+    self.teamsCollectionViewLayout.minimumLineSpacing = 0.0f;
     
     [self.teamsCollectionView setCollectionViewLayout:self.teamsCollectionViewLayout];
 }
@@ -81,15 +81,21 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
+
     return self.appDelegate.teams.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
+    if (indexPath.item == 10) {
+        
+    }
     TeamsCollectionViewCell *cell = (TeamsCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Team Cell" forIndexPath:indexPath];
     cell.team = self.appDelegate.teams[indexPath.item];
-    
+    cell.appPlayerViewLabel.text = [NSString stringWithFormat:@"Team Cell - %ld", (long)indexPath.item];
+    if (indexPath.item == 9) {
+        
+    }
+
     return cell;
 
 }

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Player.h"
 
 @interface PlayersCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *playerNameLabel;
+@property (weak, nonatomic) Player *player;
 
 @end
