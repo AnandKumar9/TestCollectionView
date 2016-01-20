@@ -41,28 +41,41 @@
     self.teamsCollectionViewLayout = [UICollectionViewFlowLayout new];
     self.teamsCollectionViewLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     self.teamsCollectionViewLayout.minimumInteritemSpacing = 0.0f;
-    self.teamsCollectionViewLayout.minimumLineSpacing = 0.0f;
-    
-    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
-    //    CGFloat cellDimension = (screenWidth - 2*self.photosCollectionViewTrailingSpaceConstraint.constant - 3*self.photosCollectionViewFlowLayout.minimumInteritemSpacing)/4 - 0.1;
-////    CGSize cellSize = CGSizeMake(screenWidth - 2*self.teamsCollectionViewTrailingSpaceConstraint.constant - 0.1, 150);
-//    CGSize cellSize = CGSizeMake(self.teamsCollectionView.frame.size.width, 150);
-//    //    [self.teamsCollectionViewLayout setEstimatedItemSize:cellSize];
-//    [self.teamsCollectionViewLayout setItemSize:cellSize];
+    self.teamsCollectionViewLayout.minimumLineSpacing = 9.0f;
     
     [self.teamsCollectionView setCollectionViewLayout:self.teamsCollectionViewLayout];
 }
 
+- (void)viewWillLayoutSubviews {
+    
+    TeamsCollectionViewCell *teamCollectionViewCell = (TeamsCollectionViewCell *)[[[NSBundle mainBundle] loadNibNamed:@"TeamsCollectionViewCell" owner:self options:nil] objectAtIndex:0];
+//    teamCollectionViewCell.frame = CGRectMake(0, 0, CGRectGetWidth(self.teamsCollectionView.bounds), CGRectGetHeight(teamCollectionViewCell.frame));
+    teamCollectionViewCell.frame = CGRectMake(0, 0, CGRectGetWidth(self.teamsCollectionView.frame), CGRectGetHeight(teamCollectionViewCell.frame));
+    [teamCollectionViewCell setNeedsLayout];
+    [teamCollectionViewCell layoutIfNeeded];
+    
+    CGFloat height = [teamCollectionViewCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    self.teamsCollectionViewLayout.estimatedItemSize = CGSizeMake(CGRectGetWidth(self.teamsCollectionView.bounds), height);
+
+    
+//    let cell = StandaloneCell.createFromNib()//just loads the nib from the bundle
+//    configureCell(cell)
+//    cell.frame = CGRectMake(0, 0, CGRectGetWidth(collectionView.bounds), CGRectGetHeight(cell.frame))
+//    cell.setNeedsLayout()
+//    cell.layoutIfNeeded()
+//    let desiredHeight: CGFloat = cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+//    return CGSize(width: CGRectGetWidth(collectionView.bounds),height: desiredHeight)
+
+}
+
 - (void)viewDidLayoutSubviews {
+//    
+//    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
+//    CGFloat cellDimension = (screenWidth - 2*self.teamsCollectionViewTrailingSpaceConstraint.constant);
+////    CGSize cellSize = CGSizeMake(cellDimension, 150);
+//    CGSize cellSize = CGSizeMake(self.teamsCollectionView.frame.size.width - 2*self.teamsCollectionViewTrailingSpaceConstraint.constant, 200);
+////    [self.teamsCollectionViewLayout setItemSize:cellSize];
     
-    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
-    CGFloat cellDimension = (screenWidth - 2*self.teamsCollectionViewTrailingSpaceConstraint.constant);
-//    CGSize cellSize = CGSizeMake(cellDimension, 150);
-    CGSize cellSize = CGSizeMake(self.teamsCollectionView.frame.size.width - 2*self.teamsCollectionViewTrailingSpaceConstraint.constant, 150);
-    [self.teamsCollectionViewLayout setItemSize:cellSize];
-    
-//    self.placeholderViewHeightConstraint.constant = 150*[self collectionView:self.teamsCollectionView numberOfItemsInSection:0];
-//    self.teamsCollectionViewHeightConstraint.constant = 150*[self collectionView:self.teamsCollectionView numberOfItemsInSection:0];
     self.teamsCollectionViewHeightConstraint.constant = self.teamsCollectionView.collectionViewLayout.collectionViewContentSize.height;
     [self.view setNeedsLayout];
 }

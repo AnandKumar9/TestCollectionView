@@ -8,10 +8,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TeamsCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="211" height="150"/>
+            <rect key="frame" x="0.0" y="0.0" width="211" height="180"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="211" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="211" height="180"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWo-QW-4VF" userLabel="Placeholder View">
                         <rect key="frame" x="0.0" y="0.0" width="211" height="100"/>
@@ -21,10 +21,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjP-Yb-2xI" userLabel="Add Player View">
-                        <rect key="frame" x="0.0" y="100" width="211" height="50"/>
+                        <rect key="frame" x="0.0" y="100" width="211" height="80"/>
                         <color key="backgroundColor" red="0.79215687509999999" green="0.031372550870000002" blue="0.074509806930000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="fFn-1a-w36"/>
+                            <constraint firstAttribute="height" constant="80" id="fFn-1a-w36"/>
                         </constraints>
                     </view>
                 </subviews>
