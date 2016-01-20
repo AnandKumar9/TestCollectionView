@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationViewController">
             <connections>
+                <outlet property="scrollView" destination="ipH-9n-Qa9" id="oma-d6-Si4"/>
                 <outlet property="teamsCollectionView" destination="Pcj-Hy-60w" id="Xpx-TI-ih7"/>
                 <outlet property="teamsCollectionViewHeightConstraint" destination="U5F-U1-Pr1" id="btV-qc-kgk"/>
                 <outlet property="teamsCollectionViewTrailingSpaceConstraint" destination="xX0-FV-gGz" id="CmC-CI-GAU"/>
@@ -28,7 +29,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="1050"/>
                                     <color key="backgroundColor" red="0.95432622830000002" green="1" blue="0.65534964259999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="1050" identifier="A1" id="U5F-U1-Pr1"/>
+                                        <constraint firstAttribute="height" priority="750" constant="1050" identifier="A1" id="U5F-U1-Pr1"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h9w-dG-tph">
                                         <size key="itemSize" width="50" height="50"/>

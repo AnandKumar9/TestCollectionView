@@ -35,7 +35,7 @@
             [team.players addObject:player];
         }
         
-        if (i == 9) {
+        if (i == 1) {
             [team.players addObject:[Player new]];
             [team.players addObject:[Player new]];
         }

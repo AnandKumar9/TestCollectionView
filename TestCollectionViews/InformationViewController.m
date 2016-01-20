@@ -18,6 +18,7 @@
 @property (nonatomic) AppDelegate *appDelegate;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *teamsCollectionViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *teamsCollectionViewTrailingSpaceConstraint;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -67,6 +68,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+//    [self.teamsCollectionView reloadData];
+//    self.scrollView.contentSize = CGSizeMake(320.0, 1800.0);
     
 }
 
