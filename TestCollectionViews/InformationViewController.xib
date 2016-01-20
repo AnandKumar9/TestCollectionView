@@ -7,7 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationViewController">
             <connections>
-                <outlet property="placeholderViewHeightConstraint" destination="P85-xd-ZdQ" id="HVb-mZ-ZY2"/>
+                <outlet property="placeholderViewHeightConstraint" destination="mhg-AR-cY0" id="Wxz-rZ-r9s"/>
+                <outlet property="teamsCollectionView" destination="Pcj-Hy-60w" id="Xpx-TI-ih7"/>
+                <outlet property="teamsCollectionViewTrailingSpaceConstraint" destination="xX0-FV-gGz" id="CmC-CI-GAU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,22 +22,28 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BO8-lT-Tj6" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1050"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGm-Ig-TUY" userLabel="Placeholder View">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
-                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pcj-Hy-60w" userLabel="Collection View">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="1050"/>
+                                    <color key="backgroundColor" red="0.95432622830000002" green="1" blue="0.65534964259999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="700" id="P85-xd-ZdQ"/>
+                                        <constraint firstAttribute="height" constant="1050" id="mhg-AR-cY0"/>
                                     </constraints>
-                                </view>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h9w-dG-tph">
+                                        <size key="itemSize" width="50" height="50"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="eGm-Ig-TUY" secondAttribute="bottom" id="35E-xN-gIr"/>
-                                <constraint firstAttribute="trailing" secondItem="eGm-Ig-TUY" secondAttribute="trailing" id="Oql-xx-E8H"/>
-                                <constraint firstItem="eGm-Ig-TUY" firstAttribute="leading" secondItem="BO8-lT-Tj6" secondAttribute="leading" id="evg-Pj-GTX"/>
-                                <constraint firstItem="eGm-Ig-TUY" firstAttribute="top" secondItem="BO8-lT-Tj6" secondAttribute="top" id="kPl-6U-o9l"/>
+                                <constraint firstAttribute="bottom" secondItem="Pcj-Hy-60w" secondAttribute="bottom" id="FUs-4W-g0l"/>
+                                <constraint firstItem="Pcj-Hy-60w" firstAttribute="leading" secondItem="BO8-lT-Tj6" secondAttribute="leading" id="Vg6-fP-4l0"/>
+                                <constraint firstItem="Pcj-Hy-60w" firstAttribute="top" secondItem="BO8-lT-Tj6" secondAttribute="top" id="lOM-uO-vgk"/>
+                                <constraint firstAttribute="trailing" secondItem="Pcj-Hy-60w" secondAttribute="trailing" id="xX0-FV-gGz"/>
                             </constraints>
                         </view>
                     </subviews>
