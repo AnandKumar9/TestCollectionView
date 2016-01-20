@@ -49,34 +49,16 @@
 - (void)viewWillLayoutSubviews {
     
     TeamsCollectionViewCell *teamCollectionViewCell = (TeamsCollectionViewCell *)[[[NSBundle mainBundle] loadNibNamed:@"TeamsCollectionViewCell" owner:self options:nil] objectAtIndex:0];
-//    teamCollectionViewCell.frame = CGRectMake(0, 0, CGRectGetWidth(self.teamsCollectionView.bounds), CGRectGetHeight(teamCollectionViewCell.frame));
-    teamCollectionViewCell.frame = CGRectMake(0, 0, CGRectGetWidth(self.teamsCollectionView.frame), CGRectGetHeight(teamCollectionViewCell.frame));
+    teamCollectionViewCell.frame = CGRectMake(0, 0, CGRectGetWidth(self.teamsCollectionView.bounds), CGRectGetHeight(teamCollectionViewCell.frame));
     [teamCollectionViewCell setNeedsLayout];
     [teamCollectionViewCell layoutIfNeeded];
     
     CGFloat height = [teamCollectionViewCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     self.teamsCollectionViewLayout.estimatedItemSize = CGSizeMake(CGRectGetWidth(self.teamsCollectionView.bounds), height);
-
-    
-//    let cell = StandaloneCell.createFromNib()//just loads the nib from the bundle
-//    configureCell(cell)
-//    cell.frame = CGRectMake(0, 0, CGRectGetWidth(collectionView.bounds), CGRectGetHeight(cell.frame))
-//    cell.setNeedsLayout()
-//    cell.layoutIfNeeded()
-//    let desiredHeight: CGFloat = cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
-//    return CGSize(width: CGRectGetWidth(collectionView.bounds),height: desiredHeight)
-
 }
 
 - (void)viewDidLayoutSubviews {
-//    
-//    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
-//    CGFloat cellDimension = (screenWidth - 2*self.teamsCollectionViewTrailingSpaceConstraint.constant);
-////    CGSize cellSize = CGSizeMake(cellDimension, 150);
-//    CGSize cellSize = CGSizeMake(self.teamsCollectionView.frame.size.width - 2*self.teamsCollectionViewTrailingSpaceConstraint.constant, 200);
-////    [self.teamsCollectionViewLayout setItemSize:cellSize];
-    
-    self.teamsCollectionViewHeightConstraint.constant = self.teamsCollectionView.collectionViewLayout.collectionViewContentSize.height;
+//    self.teamsCollectionViewHeightConstraint.constant = self.teamsCollectionView.collectionViewLayout.collectionViewContentSize.height;
     [self.view setNeedsLayout];
 }
 
